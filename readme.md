@@ -1,33 +1,33 @@
 # Contact List
 
->API de contatos, feita em java com spring boot e arquiterua de 3 camdas
+>API de contatos, feita em java com Spring Boot e arquitetura em 3 camadas.
 
 
-### camada: Cotroller
-resposável pelos end points disponibilizados pela API, e a configuração deles(post, get, put, delete e params)
+**camada: Cotroller**
+- resposável pelos endpoints disponibilizados da API, e a configuração deles(post, get, put, delete e params)
 
-### camada: Service
-responsável tratar das regras de negócio
+**camada: Service**
+- responsável tratar das regras de negócio
 
-### Camada: Repository
-responsável por conectar e realizar querys no bancoa de dados
+**Camada: Repository**
+- responsável por conectar e realizar querys no banco de dados
 
-## Tecnologias utilizadas
+# Tecnologias utilizadas
 1. java
 2. Spring JPA
 3. Spring WEB
-3. maven
-4. banco de dados: H2 (banco de dados relacional em memória)
+3. Maven
+4. Banco de dados: H2 (banco de dados relacional em memória)
 
-## práticas adotadas
+# Práticas adotadas
 - SOLID
 - API REST
 - Injeção de dependências
+- Arquiterua de 3 camadas
 
+# API endpoints
 
-### API endpoints
-
-- criar contato
+- Criar contato
 
 ```
 http POST :8080/contacts
@@ -47,7 +47,7 @@ http GET :8080/contacts/{id}
 []
 ```
 
-- atualizar contato
+- Atualizar contato
 ```
 http PUT :8080/contacts/ 
 
@@ -60,7 +60,7 @@ http PUT :8080/contacts/
 ]
 ```
 
-- Deletar Contato
+- Deletar contato
 ```
 http DELETE :8080/contacts/{id} 
 
@@ -73,5 +73,7 @@ http GET :8080/contacts ? name={nome exemplo}
 
 []
 ```
+
+
 
 
