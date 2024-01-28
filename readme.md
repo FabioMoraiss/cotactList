@@ -26,7 +26,7 @@
 - Arquiterua de 3 camadas
 
 # API endpoints
->use acese http://localhostL8080/swagger-ui/index.html após fazer a build do projeto, para ter acesso a documentação web
+>use acese http://localhost:8080/swagger-ui/index.html após fazer a build do projeto, para ter acesso a documentação web
 - Criar contato
 
 ```
