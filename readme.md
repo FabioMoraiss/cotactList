@@ -74,6 +74,40 @@ http GET :8080/contacts ? name={nome exemplo}
 []
 ```
 
+- Listar todos os contatos
+```
+http GET :8080/contacts/all
+
+[]
+```
+
+- Criar contatos em lote
+```
+http POST :8080/contacts/batch
+
+[
+  {
+    "name": "nome exemplo ",
+    "phone": "99 99999-9999"
+  },
+  {
+    "name": "nome exemplo 2",
+    "phone": "88 888888888"
+  }
+]
+```
+
+- Deletar contatos em lote
+```
+http DELETE :8080/contacts/delete-batch
+
+[
+    1,
+    2,
+    3
+]
+```
+
 
 
 

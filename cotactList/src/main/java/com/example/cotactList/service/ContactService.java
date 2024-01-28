@@ -4,6 +4,7 @@ import com.example.cotactList.exception.ContactNotFoundException;
 import com.example.cotactList.model.Contact;
 import com.example.cotactList.repository.ContactRepository;
 import com.example.cotactList.repository.ContactRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -51,5 +52,23 @@ public class ContactService {
 
     public List<Contact> findAllFiltering(String name) {
        return contactRepository.findByNameContaining(name);
+    }
+
+    public List<Contact> getAll() {
+        return contactRepository.findAll();
+    }
+
+    @Transactional
+    public void creteBatch(List<Contact> contacts) {
+        for (Contact contact : contacts) {
+            contactRepository.save(contact);
+        }
+    }
+
+    @Transactional
+    public void deleteAllById(List<Long> ids) {
+        for (Long id : ids) {
+            contactRepository.deleteById(id);
+        }
     }
 }

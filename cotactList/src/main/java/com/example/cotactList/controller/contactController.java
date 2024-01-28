@@ -51,6 +51,22 @@ public class contactController {
         return contactService.findAllFiltering(name);
     }
 
+    @GetMapping("/contacts/all")
+    public List<Contact> getAllContacts() {
+        return contactService.getAll();
+    }
+
+    @PostMapping("/contacts/batch")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createContacts(@RequestBody List<Contact> contacts) {
+        contactService.creteBatch(contacts);
+    }
+
+    @DeleteMapping("/contacts/delete-batch")
+    public void deleteContactsByIds(@RequestBody List<Long> ids) {
+        contactService.deleteAllById(ids);
+    }
+
 
 }
 
